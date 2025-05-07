@@ -120,7 +120,7 @@ export default function MovieDetails() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                ▶ Watch Trailer
+                Watch Trailer
               </a>
             )}
             {movie.imdb_id && (
@@ -130,7 +130,7 @@ export default function MovieDetails() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                ℹ️ View on IMDb
+                View on IMDb
               </a>
             )}
           </div>

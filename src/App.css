@@ -3,12 +3,14 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background: #000;
   color: #fff;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
+
 img {
   display: block;
   width: 100%;
@@ -25,10 +27,12 @@ img {
   transition: top 0.25s ease;
   z-index: 1001;
 }
+
 .search-bar.visible {
   top: 20px;
   pointer-events: auto;
 }
+
 .search-bar input {
   width: 60%;
   max-width: 600px;
@@ -39,9 +43,11 @@ img {
   color: #fff;
   font-size: 16px;
 }
+
 .search-bar input::placeholder {
   color: #ccc;
 }
+
 .search-bar button {
   all: unset;
   display: flex;
@@ -52,6 +58,7 @@ img {
   height: 36px;
   cursor: pointer;
 }
+
 .search-bar input:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
@@ -71,11 +78,13 @@ img {
   z-index: 1002;
   transform: none;
 }
+
 #searchIcon svg {
   fill: #fff;
   width: 34px;
   height: 34px;
 }
+
 #searchIcon:hover {
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
 }
@@ -88,6 +97,7 @@ img {
   backdrop-filter: blur(4px);
   z-index: 1000;
 }
+
 #searchOverlay.active {
   display: block;
 }
@@ -98,6 +108,7 @@ img {
   overflow: hidden;
   margin-bottom: 80px;
 }
+
 .banner .slide {
   position: absolute;
   inset: 0;
@@ -106,9 +117,11 @@ img {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
+
 .banner .slide.active {
   opacity: 1;
 }
+
 .banner .overlay {
   position: absolute;
   inset: 0;
@@ -116,6 +129,7 @@ img {
   pointer-events: none;
   z-index: 1;
 }
+
 .banner .content {
   position: absolute;
   bottom: 40px;
@@ -123,6 +137,7 @@ img {
   max-width: 50%;
   z-index: 2;
 }
+
 .title-box {
   display: inline-block;
   padding: 6px 12px;
@@ -138,9 +153,11 @@ img {
   overflow-x: auto;
   padding-bottom: 4px;
 }
+
 .genres::-webkit-scrollbar {
   display: none;
 }
+
 .genres {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -148,6 +165,7 @@ img {
   touch-action: pan-x;
   z-index: 3;
 }
+
 .genres span {
   flex: 0 0 auto;
   padding: 4px 8px;
@@ -156,11 +174,13 @@ img {
   white-space: nowrap;
   font-size: 14px;
 }
+
 .genres .rating {
   background: #f5cb5c;
   color: #111;
   border: none;
 }
+
 .description {
   font-size: 16px;
 }
@@ -185,12 +205,15 @@ img {
   transition: opacity 0.3s;
   z-index: 2;
 }
+
 .banner:hover .banner-arrow {
   opacity: 1;
 }
+
 .banner-arrow.left {
   left: 20px;
 }
+
 .banner-arrow.right {
   right: 20px;
 }
@@ -204,6 +227,7 @@ img {
   gap: 12px;
   z-index: 2;
 }
+
 .dot {
   position: relative;
   width: 12px;
@@ -213,6 +237,7 @@ img {
   background: transparent;
   cursor: pointer;
 }
+
 .dot.active::after {
   content: "";
   position: absolute;
@@ -228,6 +253,7 @@ section {
   background: #000;
   padding: 100px 20px;
 }
+
 section h2 {
   position: relative;
   font-size: 40px;
@@ -238,6 +264,7 @@ section h2 {
   -webkit-text-fill-color: black;
   -webkit-text-stroke: 1px white;
 }
+
 section h2::before {
   content: "";
   position: absolute;
@@ -251,10 +278,12 @@ section h2::before {
 .carousel {
   margin-bottom: 60px;
 }
+
 .posters-container {
   position: relative;
   overflow: hidden;
 }
+
 .posters {
   display: flex;
   gap: 16px;
@@ -262,13 +291,27 @@ section h2::before {
   scroll-behavior: smooth;
   padding-bottom: 8px;
 }
+
 .posters::-webkit-scrollbar {
   display: none;
 }
+
+.posters .movie {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
 .posters {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.posters .movie:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
 .movie {
   flex: 0 0 14.2857%;
 }
@@ -313,13 +356,16 @@ section h2::before {
   transition: background 0.3s, opacity 0.3s;
   z-index: 1;
 }
+
 .posters-container:hover .arrow {
   background: rgba(0, 0, 0, 0.4);
   opacity: 0.75;
 }
+
 .arrow.left {
   left: 0;
 }
+
 .arrow.right {
   right: 0;
 }
@@ -345,14 +391,17 @@ section h2::before {
   transition: background 0.3s, opacity 0.3s, transform 0.3s;
   z-index: 1002;
 }
+
 #backToTop.visible {
   opacity: 1;
   pointer-events: auto;
 }
+
 #backToTop:hover {
   background: rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
 }
+
 #backToTop svg {
   width: 20px;
   height: 20px;
@@ -362,10 +411,12 @@ section h2::before {
 footer {
   margin-top: 80px;
 }
+
 .footer-content {
   background: linear-gradient(to bottom, #000, #222);
   padding: 80px 20px;
 }
+
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -374,16 +425,19 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .footer-col {
   flex: 1 1 300px;
   min-width: 200px;
   margin-bottom: 24px;
 }
+
 .footer-col h3 {
   color: #fff;
   font-size: 18px;
   margin-bottom: 12px;
 }
+
 .footer-col p,
 .footer-col a {
   color: #bbb;
@@ -391,17 +445,21 @@ footer {
   line-height: 1.6;
   text-decoration: none;
 }
+
 .footer-col a:hover {
   color: #fff;
 }
+
 .social-links a {
   margin-right: 16px;
   font-size: 20px;
   color: #bbb;
 }
+
 .social-links a:hover {
   color: #fff;
 }
+
 .footer-bottom {
   background: #222;
   text-align: center;
@@ -421,6 +479,7 @@ footer {
   cursor: pointer;
   text-decoration: none;
 }
+
 .back-home:hover {
   background: #e0b34a;
 }
@@ -430,6 +489,7 @@ footer {
   padding: 0;
   margin: 20px;
 }
+
 .search-item {
   display: flex;
   gap: 20px;
@@ -440,14 +500,17 @@ footer {
   overflow: hidden;
   transition: background-color 0.3s, transform 0.2s;
 }
+
 .search-item:hover {
   background-color: #222;
   transform: scale(1.02);
 }
+
 .search-item img {
   width: 150px;
   object-fit: cover;
 }
+
 .search-item .info {
   flex: 1;
   padding: 16px;
@@ -455,18 +518,22 @@ footer {
   flex-direction: column;
   justify-content: center;
 }
+
 .search-item .info h3 {
   margin: 0 0 8px;
   font-size: 24px;
   color: #e50914;
 }
+
 .search-item .info h3 a {
   color: inherit;
   text-decoration: none;
 }
+
 .search-item .info h3 a:hover {
   text-decoration: underline;
 }
+
 .search-item .info p {
   margin: 0;
   font-size: 14px;
@@ -492,7 +559,6 @@ footer {
   font-size: 18px;
 }
 
-/* Back button */
 .movie-details .btn-back {
   display: inline-block;
   margin-bottom: 20px;
@@ -505,44 +571,42 @@ footer {
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
+
 .movie-details .btn-back:hover {
   background: #e50914;
   color: #000;
 }
 
-/* Header layout */
 .movie-details .header {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-/* Poster column */
 .movie-details .poster-col {
   flex: 0 0 300px;
 }
+
 .movie-details .poster-col .poster {
   width: 100%;
   border-radius: 4px;
   object-fit: cover;
 }
 
-/* Main info column */
 .movie-details .main-col {
   flex: 1;
 }
 
-/* Title */
 .movie-details .title {
   font-size: 2.5rem;
   margin: 0 0 8px;
 }
+
 .movie-details .year {
   font-weight: normal;
   color: #888;
 }
 
-/* Meta row */
 .movie-details .meta-row {
   display: flex;
   align-items: center;
@@ -551,15 +615,16 @@ footer {
   color: #aaa;
   margin-bottom: 16px;
 }
+
 .movie-details .meta-row .rating {
   color: #f5cb5c;
   font-size: 1.2rem;
 }
+
 .movie-details .meta-row .dot {
   color: #555;
 }
 
-/* Trailer embed */
 .movie-details .trailer-container {
   position: relative;
   width: 100%;
@@ -569,6 +634,7 @@ footer {
   border-radius: 4px;
   background: #000;
 }
+
 .movie-details .trailer-container iframe {
   position: absolute;
   width: 100%;
@@ -576,12 +642,12 @@ footer {
   border: none;
 }
 
-/* Action buttons */
 .movie-details .action-buttons {
   display: flex;
   gap: 12px;
   margin-bottom: 16px;
 }
+
 .movie-details .btn-action {
   padding: 8px 20px;
   background: transparent;
@@ -593,18 +659,19 @@ footer {
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
+
 .movie-details .btn-action:hover {
   background: #e50914;
   color: #000;
 }
 
-/* Genres pills */
 .movie-details .genres-row {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 16px;
 }
+
 .movie-details .genres-row span {
   background: #222;
   color: #fff;
@@ -613,63 +680,69 @@ footer {
   font-size: 0.875rem;
 }
 
-/* Credits (director, writers, stars) */
 .movie-details .credits-row p {
   margin: 4px 0;
   font-size: 0.9rem;
   color: #ddd;
 }
+
 .movie-details .credits-row strong {
   color: #e50914;
 }
 
-/* Plot summary */
 .movie-details .overview-section {
   margin-top: 32px;
 }
+
 .movie-details .overview-section h2 {
   font-size: 1.75rem;
   margin-bottom: 8px;
   border-left: 4px solid #e50914;
   padding-left: 8px;
 }
+
 .movie-details .overview-section p {
   font-size: 1rem;
   line-height: 1.5;
   color: #ccc;
 }
 
-/* Cast strip */
 .movie-details .cast-section {
   margin-top: 32px;
 }
+
 .movie-details .cast-section h2 {
   font-size: 1.75rem;
   margin-bottom: 16px;
   border-left: 4px solid #e50914;
   padding-left: 8px;
 }
+
 .movie-details .cast-list {
   display: flex;
   gap: 16px;
   overflow-x: auto;
   padding-bottom: 8px;
 }
+
 .movie-details .cast-member {
   flex: 0 0 120px;
   text-align: center;
 }
+
 .movie-details .cast-member img {
   width: 100%;
   border-radius: 4px;
   object-fit: cover;
 }
+
 .movie-details .cast-member .actor {
   margin: 8px 0 4px;
   font-size: 0.9rem;
   font-weight: bold;
   color: #fff;
 }
+
 .movie-details .cast-member .character {
   font-size: 0.8rem;
   color: #888;
@@ -705,6 +778,7 @@ footer {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
+
 .btn-back:hover {
   background-color: #e50914;
   color: #000;
@@ -714,13 +788,13 @@ footer {
   margin-bottom: 24px;
 }
 
-/*── Search Filters ─────────────────────────*/
 .search-filters {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   margin: 20px;
 }
+
 .search-filters select,
 .search-filters input {
   padding: 6px 10px;
@@ -730,12 +804,12 @@ footer {
   border-radius: 4px;
   font-size: 0.9rem;
 }
+
 .search-filters select:focus,
 .search-filters input:focus {
   outline: 1px solid #e50914;
 }
 
-/*── Clickable Genre Pills ──────────────────*/
 .genres .genre-pill {
   flex: 0 0 auto;
   padding: 4px 8px;
@@ -748,7 +822,6 @@ footer {
   text-decoration: none;
 }
 
-/* Details page pills */
 .genres-row .genre-pill {
   flex: 0 0 auto;
   padding: 4px 8px;
@@ -761,21 +834,18 @@ footer {
   text-decoration: none;
 }
 
-/* Optional hover effect (you can remove if you prefer none) */
 .genres .genre-pill:hover,
 .genres-row .genre-pill:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* ─────────────────────────────────────────────
-   Search header (filter + home)
-───────────────────────────────────────────── */
 .search-header {
   display: flex;
   align-items: center;
   gap: 12px;
   margin: 20px;
 }
+
 .filter-toggle {
   background: transparent;
   border: none;
@@ -783,6 +853,7 @@ footer {
   color: #fff;
   cursor: pointer;
 }
+
 .filter-toggle svg {
   display: block;
 }
@@ -801,6 +872,7 @@ footer {
 .search-results-list {
   margin: 20px;
 }
+
 .search-item {
   margin-bottom: 20px;
 }
@@ -810,22 +882,27 @@ footer {
     flex: 0 0 16.6667%;
   }
 }
+
 @media (max-width: 1024px) {
   .movie {
     flex: 0 0 20%;
   }
 }
+
 @media (max-width: 768px) {
   .movie {
     flex: 0 0 25%;
   }
+
   .search-bar {
     background: rgba(0, 0, 0, 0.8);
     padding: 8px 0;
   }
+
   .search-bar.visible {
     top: 0 !important;
   }
+
   .search-bar input {
     width: calc(100% - 40px);
     margin: 0 20px;
@@ -834,11 +911,13 @@ footer {
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
   }
+
   .search-bar button {
     width: 48px;
     height: 48px;
     margin-left: -48px;
   }
+
   .search-bar button svg {
     width: 24px;
     height: 24px;
@@ -848,17 +927,20 @@ footer {
   #searchIcon.visible {
     display: flex;
   }
+
   #backToTop {
     left: 50%;
     right: auto;
     transform: translateX(-50%);
   }
 }
+
 @media (max-width: 480px) {
   .movie {
     flex: 0 0 33.3333%;
   }
 }
+
 @media (max-width: 360px) {
   .movie {
     flex: 0 0 50%;

@@ -4,7 +4,7 @@ import MovieCarousel from "../components/MovieCarousel";
 
 export default function Home() {
   const [trending, setTrending] = useState([]);
-  const [nowPlaying, setNowPlaying] = useState([]);
+  const [recent, setRecent] = useState([]);
   const [topRated, setTopRated] = useState([]);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function Home() {
     }
 
     fetchSection("/trending/movie/week", setTrending);
-    fetchSection("/movie/now_playing", setNowPlaying);
+    fetchSection("/movie/now_playing", setRecent);
     fetchSection("/movie/top_rated", setTopRated);
   }, []);
 
@@ -42,7 +42,7 @@ export default function Home() {
       <Banner />
       <main id="mainContent">
         <MovieCarousel heading="Trending" movies={mapMovies(trending)} />
-        <MovieCarousel heading="Now Playing" movies={mapMovies(nowPlaying)} />
+        <MovieCarousel heading="Recent" movies={mapMovies(recent)} />
         <MovieCarousel heading="Top Rated" movies={mapMovies(topRated)} />
       </main>
     </>

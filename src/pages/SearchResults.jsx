@@ -1,4 +1,3 @@
-// src/pages/SearchResults.jsx
 import React, { useState, useEffect } from "react";
 import { useSearchParams, useNavigate, Link } from "react-router-dom";
 import SearchFilters from "../components/SearchFilters";
@@ -52,7 +51,6 @@ export default function SearchResults() {
 
   return (
     <section>
-      {/* ── Header ── */}
       <div className="search-header">
         <button
           className="filter-toggle"
@@ -73,13 +71,11 @@ export default function SearchResults() {
         </button>
       </div>
 
-      {/* ── Filters Panel ── */}
       {showFilters && <SearchFilters />}
 
       <h2>Search Results</h2>
       {error && <p className="error">{error}</p>}
 
-      {/* ── Results List ── */}
       <ul className="search-results-list">
         {results.map((movie) => (
           <li key={movie.id} className="search-item">
